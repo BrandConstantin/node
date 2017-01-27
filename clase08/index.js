@@ -7,6 +7,7 @@ handler["/"] = requestHandler.inicio;
 handler["/inicio"] = requestHandler.inicio;
 handler["/contacto"] = requestHandler.contacto;
 handler["/error404"] = requestHandler.error404;
+handler["/saluda"] = requestHandler.saluda;
 
 /*
 var handler = {
