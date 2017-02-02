@@ -1,0 +1,21 @@
+extends base
+block contenido
+  h1 Página de usuarios
+  p.
+    Nombre: #[b #{nombre}] #[br]
+    Apellido: #{apellido}#[br]
+
+  h4 Usando = 
+    - for(var i = 0; i < 10; i++){
+      = i
+    - }
+
+  h4 Usando = 
+    - for(var i = 0; i < 10; i++){
+      p= i
+    - }
+    
+  h4 Usando 
+    - for(var i = 0; i < 10; i++){
+      span #{i} 
+    - }
