@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Formulario</title>
 </head>
+
 <body>
-<h1>Formulario</h1>
-<h3>Media 3 notas</h3>
-<form method="get" action="/resultado">
-Nota I: <input type="number" value="a" min="0" max="10" autofocus="autofocus" required="required">
-Nota II: <input type="number" value="b" min="0" max="10" required="required">
-Nota III: <input type="number" value="c" min="0" max="10" required="required">
-<button type="submit" value="enviar">Enviar</button>
-</form>
+    <h1>Formulario</h1>
+    <h3>Media 3 notas</h3>
+    <form method="get" action="media">
+        Nota I: <input type="number" name="a" min="0" max="10" autofocus="autofocus" required="required"> <br> Nota II: <input type="number" name="b" min="0" max="10" required="required"> <br> Nota III: <input type="number" name="c" min="0" max="10" required="required">
+        <input type="submit" value="Enviar">
+    </form>
 </body>
+
 </html>

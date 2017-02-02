@@ -8,7 +8,7 @@ function iniciar(route, handler) {
         var rutaUrl = url.parse(request.url).pathname;
 
         //parte la url a partir de ?
-        var resultado = url.parse(request.url).split('?')[1];
+        var resultado = (request.url).split('?')[1];
         //se puede hacer de este modo también
         //var urlEnArray = request.url.split('?');
         //var resultado = urlEnArray[1];
@@ -17,13 +17,13 @@ function iniciar(route, handler) {
         var b = parseInt(querystring.parse(resultado)['b']);
         var c = parseInt(querystring.parse(resultado)['c']);
 
-        var numeros = [a, b, c];
-        console.log(numeros);
+        var data = [a, b, c];
+        //console.log(numeros);
 
         console.log("Petición para " + rutaUrl + " recibida.");
         console.log("Peticion Recibida.");
 
-        var contenido = route(rutaUrl, handler, resultado);
+        var contenido = route(rutaUrl, handler, data);
 
         response.writeHead(200, { "Content-Type": "text/html" });
         response.write(contenido);
