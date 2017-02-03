@@ -1,9 +1,21 @@
 extends base
-block contenido
+block contenido   
+
+    div(class="container")
+    div(class='row')
     h1 Registro usuarios
+
     form(action='/registro', method='post')
-        label(for='usuario') Usuario
-        input(type='text', name='usuario', placeholder='Usuario', id='usuario')
-        label(for='contrasenia') Contraseña
-        input(type='password', name='contrasenia', placeholder='Contraseña', id='contrasenia')
-        input(type='submit', value='Enviar')
+    div(class='row')
+
+        div(class='col s12 m6 l6')            
+            label(for='usuario') Usuario
+            input(type='text', name='usuario', placeholder='Usuario', id='usuario')
+
+        div(class='col s12 m6 l6')            
+            label(for='contrasenia') Contraseña
+            input(type='password', name='contrasenia', placeholder='Contraseña', id='contrasenia')
+    
+    div(class='row')
+        div(class='col s12 center')            
+            input(type='submit', value='Enviar')

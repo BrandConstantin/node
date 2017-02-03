@@ -36,4 +36,9 @@ app.get('/formulario', function(req, res) {
     res.render('formulario');
 });
 
+app.get('/registro', function(req, res) {
+    let datos = {}
+    res.render('registro', datos);
+});
+
 app.listen(8080);
