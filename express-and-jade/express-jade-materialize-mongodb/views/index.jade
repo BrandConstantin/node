@@ -1,0 +1,25 @@
+extends layout
+block contenido
+  h1 Listado de alumnos con portatiles
+  h5 Insertar Alumno 
+    a(class="btn-floating btn-large waves-effect waves-light green" href="formulario")
+      i(class="insert material-icons") add
+  div(class="container")
+    table(class="striped centered")
+      thead
+        tr
+          th Nombre
+          th Apellido
+          th Edad
+          th
+      tbody
+        for u in usuarios
+          tr
+            td #{u.nombre}
+            td #{u.apellido}
+            td #{u.edad}
+            td
+              a(class="btn-floating btn-large blue center" href="modificar?id=#{u._id}")
+                i(class="large material-icons") mode_edit
+              a(class="btn-floating btn-large red right" href="borrar?id=#{u._id}")
+                i(class="large material-icons") delete

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Future Chat</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+    <style>
+        #message {
+            width: 95%;
+            max-width: 400px;
+            height: 350px;
+            overflow-y: scroll;
+            border: 1px solid black;
+            box-shadow: 0px 20px;
+        }
+        
+        .message {
+            margin: 20px;
+            padding: 5px;
+            border-radius: 1px solid #d39;
+            background: darkgreen;
+        }
+        
+        #form {
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Future Chat</h1>
+    <div id="message">
+        <p>El super chat</p>
+        <p>Ahora mismo hablando el usuario: 'yo' con el usuario 'mismo'</p>
+    </div>
+    <div id="form">
+        <form onsubmit="return addMessage(this)" action="index.html">
+            <input id="nickname" type="text" placeholder="Nick" />
+            <textarea id="text"></textarea>
+            <input type="submit" value="Send">
+        </form>
+    </div>
+</body>
+
+</html>
